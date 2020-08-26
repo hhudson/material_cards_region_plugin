@@ -15,28 +15,28 @@ begin
 wwv_flow_api.import_begin (
  p_version_yyyy_mm_dd=>'2020.03.31'
 ,p_release=>'20.1.0.00.13'
-,p_default_workspace_id=>9690978936188613
-,p_default_application_id=>101
+,p_default_workspace_id=>9824636402579596172
+,p_default_application_id=>106247
 ,p_default_id_offset=>0
-,p_default_owner=>'ILA'
+,p_default_owner=>'HAYDENHHUDSON'
 );
 end;
 /
  
-prompt APPLICATION 101 - plugin app
+prompt APPLICATION 106247 - plugin test
 --
 -- Application Export:
---   Application:     101
---   Name:            plugin app
---   Date and Time:   23:58 Monday August 17, 2020
---   Exported By:     HAYDEN
+--   Application:     106247
+--   Name:            plugin test
+--   Date and Time:   21:35 Wednesday August 26, 2020
+--   Exported By:     HAYDENHHUDSON@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Component Export
 --   Manifest
---     PLUGIN: 21812602772185956
+--     PLUGIN: 35872229016404015743
 --   Manifest End
 --   Version:         20.1.0.00.13
---   Instance ID:     9590637774721077
+--   Instance ID:     63113759365424
 --
 
 begin
@@ -47,19 +47,19 @@ end;
 prompt --application/shared_components/plugins/region_type/material_card_plugin_08142020
 begin
 wwv_flow_api.create_plugin(
- p_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872229016404015743)
 ,p_plugin_type=>'REGION TYPE'
 ,p_name=>'MATERIAL_CARD.PLUGIN.08142020'
 ,p_display_name=>'Material Card Region Plugin'
 ,p_supported_ui_types=>'DESKTOP'
 ,p_javascript_file_urls=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
-'&G_APEX_NITRO_IMAGES.js/material_card.js',
+'#PLUGIN_FILES#js/material_card.js',
 ''))
 ,p_css_file_urls=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css',
 'https://fonts.googleapis.com/icon?family=Material+Icons',
-'&G_APEX_NITRO_IMAGES.css/material_card.css'))
+'#PLUGIN_FILES#css/material_card.css'))
 ,p_plsql_code=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'FUNCTION SQL_TO_SYS_REFCURSOR (',
 '    P_IN_SQL_STATEMENT   CLOB,',
@@ -176,8 +176,8 @@ wwv_flow_api.create_plugin(
 ,p_files_version=>392
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(21812804439185975)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872229218071015762)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -189,50 +189,50 @@ wwv_flow_api.create_plugin_attribute(
 ,p_lov_type=>'STATIC'
 );
 wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(21813257142185977)
-,p_plugin_attribute_id=>wwv_flow_api.id(21812804439185975)
+ p_id=>wwv_flow_api.id(35872229670774015764)
+,p_plugin_attribute_id=>wwv_flow_api.id(35872229218071015762)
 ,p_display_sequence=>10
 ,p_display_value=>'Basic'
 ,p_return_value=>'Basic'
 );
 wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(21813760031185978)
-,p_plugin_attribute_id=>wwv_flow_api.id(21812804439185975)
+ p_id=>wwv_flow_api.id(35872230173663015765)
+,p_plugin_attribute_id=>wwv_flow_api.id(35872229218071015762)
 ,p_display_sequence=>20
 ,p_display_value=>'Basic w/ Text over Media'
 ,p_return_value=>'Basic w/ Text over Media'
 );
 wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(21814268132185978)
-,p_plugin_attribute_id=>wwv_flow_api.id(21812804439185975)
+ p_id=>wwv_flow_api.id(35872230681764015765)
+,p_plugin_attribute_id=>wwv_flow_api.id(35872229218071015762)
 ,p_display_sequence=>30
 ,p_display_value=>'Basic w/ Header'
 ,p_return_value=>'Basic w/ Header'
 );
 wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(21814760904185979)
-,p_plugin_attribute_id=>wwv_flow_api.id(21812804439185975)
+ p_id=>wwv_flow_api.id(35872231174536015766)
+,p_plugin_attribute_id=>wwv_flow_api.id(35872229218071015762)
 ,p_display_sequence=>40
 ,p_display_value=>'Basic w/ Only Buttons'
 ,p_return_value=>'Basic w/ Only Buttons'
 );
 wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(21815233556185979)
-,p_plugin_attribute_id=>wwv_flow_api.id(21812804439185975)
+ p_id=>wwv_flow_api.id(35872231647188015766)
+,p_plugin_attribute_id=>wwv_flow_api.id(35872229218071015762)
 ,p_display_sequence=>50
 ,p_display_value=>'Basic w/ Only Icons'
 ,p_return_value=>'Basic w/ Only Icons'
 );
 wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(21815711916185979)
-,p_plugin_attribute_id=>wwv_flow_api.id(21812804439185975)
+ p_id=>wwv_flow_api.id(35872232125548015766)
+,p_plugin_attribute_id=>wwv_flow_api.id(35872229218071015762)
 ,p_display_sequence=>60
 ,p_display_value=>'Horizontal Image and Text'
 ,p_return_value=>'Horizontal Image and Text'
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(22017467595560907)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872433881227390694)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -243,8 +243,8 @@ wwv_flow_api.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(22018011422562876)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872434425054392663)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -255,8 +255,8 @@ wwv_flow_api.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(22029285154759554)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872445698786589341)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -267,8 +267,8 @@ wwv_flow_api.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(22029862057761654)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872446275689591441)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
@@ -279,8 +279,8 @@ wwv_flow_api.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(22030436705763287)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872446850337593074)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -291,8 +291,8 @@ wwv_flow_api.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(22031537255819892)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872447950887649679)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>70
@@ -303,8 +303,8 @@ wwv_flow_api.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_api.create_plugin_attribute(
- p_id=>wwv_flow_api.id(22032117696821558)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872448531328651345)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>8
 ,p_display_sequence=>80
@@ -315,8 +315,8 @@ wwv_flow_api.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_api.create_plugin_std_attribute(
- p_id=>wwv_flow_api.id(21817100406185993)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872233514038015780)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_name=>'SOURCE_SQL'
 ,p_default_value=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select ''Our Changing Planet'' CARD_TITLE, ''by Kurt Wagner'' CARD_TEXT, ''Visit ten places on our planet that are undergoing the biggest changes',
@@ -365,8 +365,8 @@ end;
 /
 begin
 wwv_flow_api.create_plugin_file(
- p_id=>wwv_flow_api.id(22016153410429879)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872432567042259666)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_file_name=>'css/material_card.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -530,8 +530,8 @@ end;
 /
 begin
 wwv_flow_api.create_plugin_file(
- p_id=>wwv_flow_api.id(22016588109431058)
-,p_plugin_id=>wwv_flow_api.id(21812602772185956)
+ p_id=>wwv_flow_api.id(35872433001741260845)
+,p_plugin_id=>wwv_flow_api.id(35872229016404015743)
 ,p_file_name=>'js/material_card.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
