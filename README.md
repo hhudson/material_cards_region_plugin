@@ -10,6 +10,7 @@ Import plugin file "region_type_plugin_material_card_plugin.sql" from source dir
 ## Plugin Settings
 The plugin settings are highly customizable and you can change:
 ### Region Type
+These "region types" are intended to be one-to-one matches for the various examples from the demo page : https://material-components.github.io/material-components-web-catalog/#/component/card
  - Basic
  - Basic w/ Text over Media
  - Basic w/ Header
